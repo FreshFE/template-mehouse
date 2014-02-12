@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>MeHouse</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/methink/css/master.css">
+</head>
+<body class="body-gray">
+
+	<link href="assets/photoswipe/photoswipe.css" type="text/css" rel="stylesheet" />
+	
+	<script type="text/javascript" src="assets/jquery/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="assets/photoswipe/lib/simple-inheritance.min.js"></script>
+	<script type="text/javascript" src="assets/photoswipe/code-photoswipe-1.0.11.min.js"></script>
+
+	<script type="text/javascript">
+		
+		/*
+			This example shows how to set up PhotoSwipe and run in "exclusive" mode.
+			
+			This means the user will only be able to interact with PhotoSwipe, and not
+			the underlying document. They will be unable to close PhotoSwipe once it 
+			is active.
+			
+			It also demonstrates how to initiate PhotoSwipe from an array of custom objects
+			not HTML elements.
+		*/
+		
+		document.addEventListener('DOMContentLoaded', function(){
+			
+			// Set up PhotoSwipe, setting "preventHide: true"
+			Code.PhotoSwipe.Current.setOptions({
+				preventHide: true,
+				getImageSource: function(obj){
+					return obj.url;
+				},
+				getImageCaption: function(obj){
+					return obj.caption;
+				}
+			});
+			
+			Code.PhotoSwipe.Current.setImages([
+				{ url: 'assets/icon/case/1.jpg', caption: 'Image 001'},
+				{ url: 'assets/icon/case/2.jpg', caption: 'Image 002'},
+				{ url: 'assets/icon/case/3.jpg', caption: 'Image 003'}
+			]);
+		
+			Code.PhotoSwipe.Current.show(0);
+			
+		}, false);
+
+		
+	</script>
+
+</body>
+</html>

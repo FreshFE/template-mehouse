@@ -1,0 +1,44 @@
+html,
+body {
+	overflow-x: hidden;
+}
+
+.body-gray {
+	background: #eee;
+}
+
+.home-carousel {
+	margin-bottom: 20px;
+	background: #666;
+}
+
+.home-sudoku img {
+	display: block;
+	min-width: 100%;
+}
+
+.home-sudoku p {
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+}
+
+.home-sudoku p a {
+	color: #999;
+}
+
+header {
+	height: 70px;
+}
+
+header .navbar {
+	margin-bottom: 0;
+}
+
+h2.archive-title {
+	font-size: 22px;
+}
+
+h2.archive-title a {
+	color: #000;
+}
